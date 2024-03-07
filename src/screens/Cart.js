@@ -1,4 +1,5 @@
 import React from 'react'
+import Trash from './trash.png'
 import { useCart, useDispatchCart } from '../components/ContextReducer'
 // import trash from '../trash.svg'
 export default function Cart() {
@@ -42,14 +43,14 @@ const handleCheckOut =  async()=>{
                         <th scope='col'></th>
                     </tr>
                 </thead>
-                <tbody>{data.map((food,index)=>(
+                <tbody className='text-white'>{data.map((food,index)=>(
                     <tr>
                         <th scop='row'>{index + 1}</th>
                         <td>{food.name}</td>
                         <td>{food.qty}</td>
                         <td>{food.size}</td>
                         <td>{food.price}</td>
-                        <td ><button type="button" className="btn p-0" onClick={() => { dispatch({ type: "REMOVE", index: index }) }} >delete</button> 
+                        <td ><button type="button" className="btn p-0 text-white" onClick={() => { dispatch({ type: "REMOVE", index: index }) }} >< img className='img1' src={Trash}/></button> 
                             </td>
                     </tr>
                 ))}
