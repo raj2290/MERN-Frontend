@@ -6,7 +6,7 @@ export default function Login() {
   const handleSubmit = async(e)=>{
     e.preventDefault();
     console.log(JSON.stringify({email:credentials.email,password:credentials.password,}))
-    const response = await fetch("http://localhost:4000/api/loginuser",{
+    const response = await fetch("https://mern-backend-815j.onrender.com/api/loginuser",{
       method:'POST',
       headers:{
         'content-Type':'application/json'

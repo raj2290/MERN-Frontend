@@ -5,7 +5,7 @@ export default function Signup() {
   const handleSubmit = async(e)=>{
     e.preventDefault();
     console.log(JSON.stringify({name:credentials.name, email:credentials.email,password:credentials.password,location:credentials.geolocation}))
-    const response = await fetch("http://localhost:4000/api/creatuser",{
+    const response = await fetch("https://mern-backend-815j.onrender.com/api/creatuser",{
       method:'POST',
       headers:{
         'content-Type':'application/json'

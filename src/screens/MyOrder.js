@@ -8,7 +8,7 @@ export default function MyOrder() {
 
     const fetchMyOrder = async () => {
         console.log(localStorage.getItem('userEmail'))
-        await fetch("http://localhost:4000/api/auth/myOrderData", {
+        await fetch("https://mern-backend-815j.onrender.com/api/auth/myOrderData", {
            
             method: 'POST',
             headers: {

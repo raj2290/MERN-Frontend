@@ -8,7 +8,7 @@ export default function Home() {
   const [foodCat, setFoodCat] = useState([]);
   const [foodItem, setFoodItem] = useState([]);
   const loadData = async () => {
-    let response = await fetch("http://localhost:4000/api/foodData", {
+    let response = await fetch("https://mern-backend-815j.onrender.com/api/foodData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
